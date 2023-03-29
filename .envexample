@@ -1,5 +1,5 @@
 #MYSQL
-MYSQL_DSN=mysql:host=localhost;dbname=db
+MYSQL_DSN=mysql:host=172.17.0.1;dbname=giodev_portfolio'
 MYSQL_USERNAME=root
-MYSQL_PASSWORD=
+MYSQL_PASSWORD=root
 
