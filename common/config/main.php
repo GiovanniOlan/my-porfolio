@@ -12,7 +12,24 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [],
+            'enableStrictParsing' => false,
+            'rules' => [
+                '<controller:[\w-]+>/<id:\d+>'              => '<controller>/view',
+                '<controller:[\w-]+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:[\w-]+>/<action:\w+>'          => '<controller>/<action>',
+
+
+
+
+                // '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                // '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                // '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                // '<controller:\w+>/<action:\w+>/<id:\d+>/<page:\d+>' => '<controller>/<action>',
+                // '<controller:\w+>/<action:\w+>/<id:\d+>/<page:\d+>/<per-page:\d+>' => '<controller>/<action>',
+                // '<controller:\w+>/<action:\w+>/<id:\d+>/<page:\d+>/<sort:\w+>' => '<controller>/<action>',
+                // '<controller:\w+>/<action:\w+>/<id:\d+>/<page:\d+>/<per-page:\d+>/<sort:\w+>' => '<controller>/<action>',
+
+            ],
         ],
 
     ],
